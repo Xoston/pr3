@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - ТехноКомпания</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="site-header">
+        <div class="container">
+            <div class="site-header__inner">
+                <a href="index.html" class="site-header__brand">
+                    <svg class="site-header__logo" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L1 21h22L12 2zm0 4.5l8.5 14.5h-17L12 6.5z"/>
+                    </svg>
+                    ТехноКомпания
+                </a>
+                
+                <nav class="site-nav" aria-label="Основная навигация">
+                    <ul class="site-nav__list">
+                        <li class="site-nav__item">
+                            <a href="index.html" class="site-nav__link site-nav__link--active">Главная</a>
+                        </li>
+                        <li class="site-nav__item">
+                            <a href="about.html" class="site-nav__link">О нас</a>
+                        </li>
+                        <li class="site-nav__item">
+                            <a href="contacts.html" class="site-nav__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Хлебные крошки -->
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <div class="container">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                    <a href="index.html" class="breadcrumbs__link" aria-current="page">Главная</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="container">
+        <!-- Герой-секция -->
+        <section class="hero">
+            <h1 class="hero__title">Инновационные технологии для бизнеса</h1>
+            <p class="hero__subtitle">Мы создаем цифровые решения, которые помогают компаниям расти и развиваться в современном мире</p>
+            <a href="#services" class="btn btn--primary">Наши услуги</a>
+        </section>
+
+        <!-- Секция услуг -->
+        <section id="services" class="section">
+            <h2 class="section__title">Наши услуги</h2>
+            
+            <div class="card-grid">
+                <article class="card">
+                    <img src="https://picsum.photos/400/200?random=1" alt="Веб-разработка" class="card__image" width="400" height="200">
+                    <h3 class="card__title">Веб-разработка</h3>
+                    <p class="card__description">Создаем современные и функциональные веб-приложения с использованием передовых технологий.</p>
+                </article>
+                
+                <article class="card">
+                    <img src="https://picsum.photos/400/200?random=2" alt="Мобильные приложения" class="card__image" width="400" height="200">
+                    <h3 class="card__title">Мобильные приложения</h3>
+                    <p class="card__description">Разрабатываем кроссплатформенные мобильные приложения для iOS и Android.</p>
+                </article>
+                
+                <article class="card">
+                    <img src="https://picsum.photos/400/200?random=3" alt="UI/UX дизайн" class="card__image" width="400" height="200">
+                    <h3 class="card__title">UI/UX дизайн</h3>
+                    <p class="card__description">Создаем интуитивно понятные и эстетичные интерфейсы для цифровых продуктов.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Секция с видео -->
+        <section class="section section--alt">
+            <h2 class="section__title">О нашей работе</h2>
+            <div class="media-container">
+                <video controls preload="metadata" poster="https://picsum.photos/800/450?random=4" class="media-container__video">
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="site-footer__inner">
+                <div class="site-footer__section">
+                    <h3>ТехноКомпания</h3>
+                    <p>Инновационные решения для вашего бизнеса</p>
+                </div>
+                
+                <div class="site-footer__section">
+                    <h3>Контакты</h3>
+                    <ul class="site-footer__links">
+                        <li><a href="mailto:info@company.com">info@company.com</a></li>
+                        <li><a href="tel:+78001234567">+7 (800) 123-45-67</a></li>
+                    </ul>
+                </div>
+                
+                <div class="site-footer__section">
+                    <h3>Навигация</h3>
+                    <ul class="site-footer__links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

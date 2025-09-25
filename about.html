@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас - ТехноКомпания</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="site-header">
+        <div class="container">
+            <div class="site-header__inner">
+                <a href="index.html" class="site-header__brand">
+                    <svg class="site-header__logo" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L1 21h22L12 2zm0 4.5l8.5 14.5h-17L12 6.5z"/>
+                    </svg>
+                    ТехноКомпания
+                </a>
+                
+                <nav class="site-nav" aria-label="Основная навигация">
+                    <ul class="site-nav__list">
+                        <li class="site-nav__item">
+                            <a href="index.html" class="site-nav__link">Главная</a>
+                        </li>
+                        <li class="site-nav__item">
+                            <a href="about.html" class="site-nav__link site-nav__link--active">О нас</a>
+                        </li>
+                        <li class="site-nav__item">
+                            <a href="contacts.html" class="site-nav__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Хлебные крошки -->
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <div class="container">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                    <a href="index.html" class="breadcrumbs__link">Главная</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a href="about.html" class="breadcrumbs__link" aria-current="page">О нас</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="container">
+        <section class="section">
+            <h1 class="section__title">О нашей компании</h1>
+            
+            <div class="card">
+                <h2 class="section__subtitle">Наша история</h2>
+                <p>ТехноКомпания была основана в 2010 году с целью создания инновационных IT-решений для бизнеса. За годы работы мы выросли из небольшой команды энтузиастов в ведущего поставщика цифровых услуг.</p>
+                
+                <h2 class="section__subtitle mt-4">Наша миссия</h2>
+                <p>Мы стремимся сделать передовые технологии доступными для бизнеса любого масштаба, помогая нашим клиентам достигать их целей с помощью цифровой трансформации.</p>
+                
+                <h2 class="section__subtitle mt-4">Наши ценности</h2>
+                <ul>
+                    <li><strong>Инновации</strong> - постоянно развиваемся и внедряем новые технологии</li>
+                    <li><strong>Качество</strong> - гарантируем высокое качество всех наших решений</li>
+                    <li><strong>Клиентоориентированность</strong> - ставим потребности клиентов на первое место</li>
+                    <li><strong>Ответственность</strong> - выполняем обязательства в установленные сроки</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Команда -->
+        <section class="section section--alt">
+            <h2 class="section__title">Наша команда</h2>
+            
+            <div class="card-grid">
+                <article class="card text-center">
+                    <img src="https://i.pravatar.cc/150?img=1" alt="Кирилл Красников" class="card__image" width="150" height="150" style="border-radius: 50%; margin: 0 auto;">
+                    <h3 class="card__title">Кирилл Красников</h3>
+                    <p class="card__description text-muted">Генеральный директор</p>
+                    <p>Основатель компании с 15-летним опытом в IT-индустрии.</p>
+                </article>
+                
+                <article class="card text-center">
+                    <img src="https://i.pravatar.cc/150?img=2" alt="Мария Иванова" class="card__image" width="150" height="150" style="border-radius: 50%; margin: 0 auto;">
+                    <h3 class="card__title">Мария Иванова</h3>
+                    <p class="card__description text-muted">Технический директор</p>
+                    <p>Эксперт в области веб-разработки и архитектуры приложений.</p>
+                </article>
+                
+                <article class="card text-center">
+                    <img src="https://i.pravatar.cc/150?img=3" alt="Дмитрий Сидоров" class="card__image" width="150" height="150" style="border-radius: 50%; margin: 0 auto;">
+                    <h3 class="card__title">Дмитрий Сидоров</h3>
+                    <p class="card__description text-muted">Lead Designer</p>
+                    <p>Создает интуитивные и эстетичные пользовательские интерфейсы.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="site-footer__inner">
+                <div class="site-footer__section">
+                    <h3>ТехноКомпания</h3>
+                    <p>Инновационные решения для вашего бизнеса</p>
+                </div>
+                
+                <div class="site-footer__section">
+                    <h3>Контакты</h3>
+                    <ul class="site-footer__links">
+                        <li><a href="mailto:info@company.com">info@company.com</a></li>
+                        <li><a href="tel:+78001234567">+7 (800) 123-45-67</a></li>
+                    </ul>
+                </div>
+                
+                <div class="site-footer__section">
+                    <h3>Навигация</h3>
+                    <ul class="site-footer__links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
