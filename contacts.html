@@ -4,3 +4,271 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты - ТехноКомпания</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="site-header">
+        <div class="container">
+            <div class="site-header__inner">
+                <a href="index.html" class="site-header__brand">
+                    <svg class="site-header__logo" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L1 21h22L12 2zm0 4.5l8.5 14.5h-17L12 6.5z"/>
+                    </svg>
+                    ТехноКомпания
+                </a>
+                
+                <nav class="site-nav" aria-label="Основная навигация">
+                    <ul class="site-nav__list">
+                        <li class="site-nav__item">
+                            <a href="index.html" class="site-nav__link">Главная</a>
+                        </li>
+                        <li class="site-nav__item">
+                            <a href="about.html" class="site-nav__link">О нас</a>
+                        </li>
+                        <li class="site-nav__item">
+                            <a href="contacts.html" class="site-nav__link site-nav__link--active">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Хлебные крошки -->
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <div class="container">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                    <a href="index.html" class="breadcrumbs__link">Главная</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a href="contacts.html" class="breadcrumbs__link" aria-current="page">Контакты</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="container">
+        <section class="section">
+            <h1 class="section__title">Свяжитесь с нами</h1>
+            
+            <div class="card-grid">
+                <div class="card">
+                    <h2 class="section__subtitle">Контактная информация</h2>
+                    <address>
+                        <p><strong>Адрес:</strong> г. Москва, ул. Примерная, д. 123</p>
+                        <p><strong>Телефон:</strong> <a href="tel:+78001234567">+7 (800) 123-45-67</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:info@company.com">info@company.com</a></p>
+                        <p><strong>Режим работы:</strong> Пн-Пт: 9:00-18:00</p>
+                    </address>
+                </div>
+                
+                <div class="card">
+                    <h2 class="section__subtitle">Форма обратной связи</h2>
+                    <p>Заполните форму ниже, и мы свяжемся с вами в ближайшее время</p>
+                    <button id="openContactForm" class="btn btn--primary" style="width: 100%;">Написать нам</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Карта -->
+        <section class="section section--alt">
+            <h2 class="section__title">Как нас найти</h2>
+            <div class="media-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.372789924803!2d37.617299315829034!3d55.75582600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a738fa419%3A0x7c347d506f527115!2z0JrRgNCw0YHQvdC-0Y_RgNGB0Los!5e0!3m2!1sru!2sru!4v1234567890123" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Карта расположения офиса">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- Модальное окно с формой -->
+    <dialog id="contactDialog" class="dialog">
+        <div class="dialog__header">
+            <h2 class="dialog__title">Обратная связь</h2>
+            <button class="dialog__close" aria-label="Закрыть">&times;</button>
+        </div>
+        
+        <form id="contactForm" class="form" novalidate>
+            <div class="form__group">
+                <label for="name" class="form__label">Имя *</label>
+                <input type="text" id="name" name="name" class="form__control" required minlength="2" autocomplete="name">
+                <div class="form__error">Пожалуйста, введите ваше имя</div>
+            </div>
+            
+            <div class="form__group">
+                <label for="email" class="form__label">Email *</label>
+                <input type="email" id="email" name="email" class="form__control" required autocomplete="email">
+                <div class="form__error">Пожалуйста, введите корректный email</div>
+            </div>
+            
+            <div class="form__group">
+                <label for="phone" class="form__label">Телефон</label>
+                <input type="tel" id="phone" name="phone" class="form__control" autocomplete="tel" 
+                       placeholder="+7 (___) ___-__-__" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$">
+                <small class="text-muted">Формат: +7 (900) 000-00-00</small>
+            </div>
+            
+            <div class="form__group">
+                <label for="topic" class="form__label">Тема *</label>
+                <select id="topic" name="topic" class="form__control" required>
+                    <option value="">Выберите тему</option>
+                    <option value="question">Вопрос</option>
+                    <option value="cooperation">Сотрудничество</option>
+                    <option value="support">Техническая поддержка</option>
+                    <option value="other">Другое</option>
+                </select>
+                <div class="form__error">Пожалуйста, выберите тему сообщения</div>
+            </div>
+            
+            <div class="form__group">
+                <label for="message" class="form__label">Сообщение *</label>
+                <textarea id="message" name="message" class="form__control" rows="5" required minlength="10"></textarea>
+                <div class="form__error">Пожалуйста, введите ваше сообщение (минимум 10 символов)</div>
+            </div>
+            
+            <div class="form__actions">
+                <button type="button" class="btn btn--secondary" id="closeDialog">Отмена</button>
+                <button type="submit" class="btn btn--primary">Отправить</button>
+            </div>
+        </form>
+        
+        <div class="success-message" id="successMessage">
+            Сообщение успешно отправлено! Мы свяжемся с вами в ближайшее время.
+        </div>
+    </dialog>
+
+    <!-- Футер -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="site-footer__inner">
+                <div class="site-footer__section">
+                    <h3>ТехноКомпания</h3>
+                    <p>Инновационные решения для вашего бизнеса</p>
+                </div>
+                
+                <div class="site-footer__section">
+                    <h3>Контакты</h3>
+                    <ul class="site-footer__links">
+                        <li><a href="mailto:info@company.com">info@company.com</a></li>
+                        <li><a href="tel:+78001234567">+7 (800) 123-45-67</a></li>
+                    </ul>
+                </div>
+                
+                <div class="site-footer__section">
+                    <h3>Навигация</h3>
+                    <ul class="site-footer__links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Элементы DOM
+        const dlg = document.getElementById('contactDialog');
+        const openBtn = document.getElementById('openContactForm');
+        const closeBtn = document.getElementById('closeDialog');
+        const dialogCloseBtn = document.querySelector('.dialog__close');
+        const form = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+        let lastActive = null;
+        
+        // Открытие модального окна
+        openBtn.addEventListener('click', () => {
+            lastActive = document.activeElement;
+            dlg.showModal();
+            dlg.querySelector('input, select, textarea, button')?.focus();
+        });
+        
+        // Закрытие модального окна
+        function closeModal() {
+            dlg.close();
+            successMessage.style.display = 'none';
+            form.reset();
+            // Сброс состояния ошибок
+            document.querySelectorAll('.form__control').forEach(control => {
+                control.removeAttribute('aria-invalid');
+            });
+        }
+        
+        closeBtn.addEventListener('click', closeModal);
+        dialogCloseBtn.addEventListener('click', closeModal);
+        
+        // Закрытие при клике вне модального окна
+        dlg.addEventListener('click', (e) => {
+            if (e.target === dlg) {
+                closeModal();
+            }
+        });
+        
+        // Обработка отправки формы
+        form?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Сброс кастомных сообщений
+            [...form.elements].forEach(el => el.setCustomValidity?.(''));
+            
+            // Проверка встроенных ограничений
+            if (!form.checkValidity()) {
+                // A11y: подсветка проблемных полей
+                [...form.elements].forEach(el => {
+                    if (el.willValidate) {
+                        el.toggleAttribute('aria-invalid', !el.checkValidity());
+                    }
+                });
+                
+                form.reportValidity();
+                return;
+            }
+            
+            // Успешная отправка
+            successMessage.style.display = 'block';
+            
+            // Через 2 секунды закрываем окно
+            setTimeout(() => {
+                closeModal();
+            }, 2000);
+        });
+        
+        // Возврат фокуса при закрытии модалки
+        dlg.addEventListener('close', () => { 
+            lastActive?.focus(); 
+        });
+        
+        // Маска для телефона
+        const phone = document.getElementById('phone');
+        phone?.addEventListener('input', () => {
+            const digits = phone.value.replace(/\D/g,'').slice(0,11);
+            const d = digits.replace(/^8/, '7');
+            const parts = [];
+            
+            if (d.length > 0) parts.push('+7');
+            if (d.length > 1) parts.push(' (' + d.slice(1,4));
+            if (d.length >= 4) parts[parts.length - 1] += ')';
+            if (d.length >= 5) parts.push(' ' + d.slice(4,7));
+            if (d.length >= 8) parts.push('-' + d.slice(7,9));
+            if (d.length >= 10) parts.push('-' + d.slice(9,11));
+            
+            phone.value = parts.join('');
+        });
+        
+        // Валидация в реальном времени
+        form?.addEventListener('input', (e) => {
+            const target = e.target;
+            if (target.willValidate) {
+                target.toggleAttribute('aria-invalid', !target.checkValidity());
+            }
+        });
+    </script>
+</body>
+</html>
