@@ -3,132 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>О нас - ТехноКомпания</title>
+    <title>О нас - Крутая веб-студия</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Шапка сайта -->
-    <header class="site-header">
+    <header class="header">
         <div class="container">
-            <div class="site-header__inner">
-                <a href="index.html" class="site-header__brand">
-                    <svg class="site-header__logo" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L1 21h22L12 2zm0 4.5l8.5 14.5h-17L12 6.5z"/>
-                    </svg>
-                    ТехноКомпания
-                </a>
-                
-                <nav class="site-nav" aria-label="Основная навигация">
-                    <ul class="site-nav__list">
-                        <li class="site-nav__item">
-                            <a href="index.html" class="site-nav__link">Главная</a>
-                        </li>
-                        <li class="site-nav__item">
-                            <a href="about.html" class="site-nav__link site-nav__link--active">О нас</a>
-                        </li>
-                        <li class="site-nav__item">
-                            <a href="contacts.html" class="site-nav__link">Контакты</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+            <nav class="nav">
+                <a class="nav-link" href="index.html">Главная</a>
+                <a class="nav-link active" href="about.html">О нас</a>
+                <a class="nav-link" href="contacts.html">Контакты</a>
+            </nav>
         </div>
     </header>
 
-    <!-- Хлебные крошки -->
-    <nav class="breadcrumbs" aria-label="Хлебные крошки">
-        <div class="container">
-            <ul class="breadcrumbs__list">
-                <li class="breadcrumbs__item">
-                    <a href="index.html" class="breadcrumbs__link">Главная</a>
-                </li>
-                <li class="breadcrumbs__item">
-                    <a href="about.html" class="breadcrumbs__link" aria-current="page">О нас</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <main class="main">
+        <section class="hero">
+            <h1>Мы - не Уолтер Уайт</h1>
+            <p>Но тоже превращаем простые компоненты в нечто прекрасное</p>
+        </section>
 
-    <!-- Основной контент -->
-    <main class="container">
         <section class="section">
-            <h1 class="section__title">О нашей компании</h1>
-            
-            <div class="card">
-                <h2 class="section__subtitle">Наша история</h2>
-                <p>ТехноКомпания была основана в 2010 году с целью создания инновационных IT-решений для бизнеса. За годы работы мы выросли из небольшой команды энтузиастов в ведущего поставщика цифровых услуг.</p>
-                
-                <h2 class="section__subtitle mt-4">Наша миссия</h2>
-                <p>Мы стремимся сделать передовые технологии доступными для бизнеса любого масштаба, помогая нашим клиентам достигать их целей с помощью цифровой трансформации.</p>
-                
-                <h2 class="section__subtitle mt-4">Наши ценности</h2>
-                <ul>
-                    <li><strong>Инновации</strong> - постоянно развиваемся и внедряем новые технологии</li>
-                    <li><strong>Качество</strong> - гарантируем высокое качество всех наших решений</li>
-                    <li><strong>Клиентоориентированность</strong> - ставим потребности клиентов на первое место</li>
-                    <li><strong>Ответственность</strong> - выполняем обязательства в установленные сроки</li>
-                </ul>
+            <h2>Наша "серьёзная" история</h2>
+            <div class="about-content">
+                <img src="https://avatars.mds.yandex.net/get-ott/212840/2a0000017802c1ad72babf5fca7bb369de8e/672x378" 
+                     alt="Наш офис" 
+                     width="600" 
+                     height="400">
+                <div>
+                    <p>Меня зовут Вайт. Мы с Джесси поняли: либо будем делать скучные отчеты, либо сайты, которые ломают систему.</p>
+                    <p>Сначала клиенты платили советами по жизни. Потом — голубым метом. Шучу. Деньгами. Но качество осталось прежним — 99.1% чистого кода.</p>
+                    <p>Мы те, кто стучится в дверь. Вашего браузера.</p>
+                </div>
             </div>
         </section>
 
-        <!-- Команда -->
-        <section class="section section--alt">
-            <h2 class="section__title">Наша команда</h2>
-            
-            <div class="card-grid">
-                <article class="card text-center">
-                    <img src="https://i.pravatar.cc/150?img=1" alt="Кирилл Красников" class="card__image" width="150" height="150" style="border-radius: 50%; margin: 0 auto;">
-                    <h3 class="card__title">Кирилл Красников</h3>
-                    <p class="card__description text-muted">Генеральный директор</p>
-                    <p>Основатель компании с 15-летним опытом в IT-индустрии.</p>
-                </article>
+        <section class="section">
+            <h2>Команда мечты</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI3tT7Tu7BAmNS1DN4H2vaoTkKJudWuFuxeQ&s" 
+                         alt="Саня - главный по коду" 
+                         width="600" 
+                         height="600">
+                    <h3>Саня</h3>
+                    <p><strong>Главный по коду</strong></p>
+                    <p>Знает 15 языков программирования,опыт примерно 500 лет.</p>
+                </div>
                 
-                <article class="card text-center">
-                    <img src="https://i.pravatar.cc/150?img=2" alt="Мария Иванова" class="card__image" width="150" height="150" style="border-radius: 50%; margin: 0 auto;">
-                    <h3 class="card__title">Мария Иванова</h3>
-                    <p class="card__description text-muted">Технический директор</p>
-                    <p>Эксперт в области веб-разработки и архитектуры приложений.</p>
-                </article>
+                <div class="card">
+                    <img src="https://i.mycdn.me/getVideoPreview?id=7925421705940&idx=2&type=39&tkn=XGGhQIl8-HhF5jRyg5_gC2B2Q70&fn=vid_w    " 
+                         alt="Маша - делает красиво" 
+                         width="300" 
+                         height="300">
+                    <h3>Маша</h3>
+                    <p><strong>Делает красиво</strong></p>
+                    <p>Может сделать дизайн из ничего. Говорит, что пиксели должны дружить. Мы верим ей на слово.</p>
+                </div>
                 
-                <article class="card text-center">
-                    <img src="https://i.pravatar.cc/150?img=3" alt="Дмитрий Сидоров" class="card__image" width="150" height="150" style="border-radius: 50%; margin: 0 auto;">
-                    <h3 class="card__title">Дмитрий Сидоров</h3>
-                    <p class="card__description text-muted">Lead Designer</p>
-                    <p>Создает интуитивные и эстетичные пользовательские интерфейсы.</p>
-                </article>
+                <div class="card">
+                    <img src="https://n1s1.hsmedia.ru/38/99/8c/38998cfef711a9068650e2f808b7ad5a/480x497_0xac120003_12833403921593171961.jpg" 
+                         alt="Валера - чтобы вас нашли" 
+                         width="100" 
+                         height="100">
+                    <h3>Валера</h3>
+                    <p><strong>Чтобы вас нашли</strong></p>
+                    <p>Знает, как взломать пентагон (легально).</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Наши "официальные" достижения</h2>
+            <div class="achievements">
+                <div class="achievement">
+                    <span class="number">150+</span>
+                    <span class="text">Дел закрыто!</span>
+                </div>
+                <div class="achievement">
+                    <span class="number">98%</span>
+                    <span class="text">Клиентов не вызвало адвоката</span>
+                </div>
+                <div class="achievement">
+                    <span class="number">∞</span>
+                    <span class="text">Доказательств нашей работы</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Почему мы?</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>🤝 Better Call Us!</h3>
+                    <p>Честность — наша специализация! Говорим, если не можем сделать. Но мы можем всё!</p>
+                </div>
+                <div class="card">
+                    <h3>⚡ Быстрее Сола в костюме</h3>
+                    <p>Сделаем до того, как вы успеете найти другой вариант!</p>
+                </div>
+                <div class="card">
+                    <h3>💬 Понятнее чем Джимми</h3>
+                    <p>Объясняем без юридических терминов. Если используем — даём взятку. Шутка! Объясняем нормально.</p>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- Футер -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="site-footer__inner">
-                <div class="site-footer__section">
-                    <h3>ТехноКомпания</h3>
-                    <p>Инновационные решения для вашего бизнеса</p>
-                </div>
-                
-                <div class="site-footer__section">
-                    <h3>Контакты</h3>
-                    <ul class="site-footer__links">
-                        <li><a href="mailto:info@company.com">info@company.com</a></li>
-                        <li><a href="tel:+78001234567">+7 (800) 123-45-67</a></li>
-                    </ul>
-                </div>
-                
-                <div class="site-footer__section">
-                    <h3>Навигация</h3>
-                    <ul class="site-footer__links">
-                        <li><a href="index.html">Главная</a></li>
-                        <li><a href="about.html">О нас</a></li>
-                        <li><a href="contacts.html">Контакты</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <script>
+        const themeToggle = document.createElement('button');
+        themeToggle.className = 'theme-toggle';
+        themeToggle.textContent = '🌓';
+        themeToggle.title = 'Сменить тему';
+        themeToggle.onclick = function() {
+            document.body.classList.toggle('dark');
+            localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+        };
 
-    <script src="script.js"></script>
+        if (localStorage.getItem('theme') === 'dark' || 
+            (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.body.classList.add('dark');
+        }
+
+        document.querySelector('.nav').appendChild(themeToggle);
+    </script>
 </body>
 </html>

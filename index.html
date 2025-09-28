@@ -3,124 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная - ТехноКомпания</title>
+    <title>Крутая веб-студия</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Шапка сайта -->
-    <header class="site-header">
+    <header class="header">
         <div class="container">
-            <div class="site-header__inner">
-                <a href="index.html" class="site-header__brand">
-                    <svg class="site-header__logo" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L1 21h22L12 2zm0 4.5l8.5 14.5h-17L12 6.5z"/>
-                    </svg>
-                    ТехноКомпания
-                </a>
-                
-                <nav class="site-nav" aria-label="Основная навигация">
-                    <ul class="site-nav__list">
-                        <li class="site-nav__item">
-                            <a href="index.html" class="site-nav__link site-nav__link--active">Главная</a>
-                        </li>
-                        <li class="site-nav__item">
-                            <a href="about.html" class="site-nav__link">О нас</a>
-                        </li>
-                        <li class="site-nav__item">
-                            <a href="contacts.html" class="site-nav__link">Контакты</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+            <nav class="nav">
+                <a class="nav-link active" href="index.html">Главная</a>
+                <a class="nav-link" href="about.html">О нас</a>
+                <a class="nav-link" href="contacts.html">Контакты</a>
+                <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+            </nav>
         </div>
     </header>
 
-    <!-- Хлебные крошки -->
-    <nav class="breadcrumbs" aria-label="Хлебные крошки">
-        <div class="container">
-            <ul class="breadcrumbs__list">
-                <li class="breadcrumbs__item">
-                    <a href="index.html" class="breadcrumbs__link" aria-current="page">Главная</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Основной контент -->
-    <main class="container">
-        <!-- Герой-секция -->
+    <main class="main">
         <section class="hero">
-            <h1 class="hero__title">Инновационные технологии для бизнеса</h1>
-            <p class="hero__subtitle">Мы создаем цифровые решения, которые помогают компаниям расти и развиваться в современном мире</p>
-            <a href="#services" class="btn btn--primary">Наши услуги</a>
+            <h1>Первое правило Студии: ты никому не рассказываешь про Студию.<h1>Второе правило Студии: НИКОМУ. Ты понял?</h1></h1>
+            <p>Мы не делаем «милые сайтики». Мы создаем цифровое оружие.</p>
         </section>
 
-        <!-- Секция услуг -->
-        <section id="services" class="section">
-            <h2 class="section__title">Наши услуги</h2>
-            
-            <div class="card-grid">
-                <article class="card">
-                    <img src="https://picsum.photos/400/200?random=1" alt="Веб-разработка" class="card__image" width="400" height="200">
-                    <h3 class="card__title">Веб-разработка</h3>
-                    <p class="card__description">Создаем современные и функциональные веб-приложения с использованием передовых технологий.</p>
-                </article>
+        <section class="section">
+            <h2>Что мы умеем</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr8fX0gMwJPoI2Qjo8UmZJfq_AtgrDtvL37g&s" 
+                         alt="Программист за работой" 
+                         width="400" 
+                         height="300">
+                    <h3>Веб-разработка</h3>
+                    <p>Мы не пишем код. Мы вправляем кости кривому интернету.</p>
+                    <ul>
+                        <li>Бэкенд, который не согнётся под тысячей запросов. Как кулак в горло серверу</li>
+                        <li>Код, который понятен только нам. И это хорошо. Это значит, его не сломают.</li>
+                        <li>Гарантия: твой сайт переживёт апокалипсис. Наши сервера будут работать, даже когда соцсети умрут.</li>
+                    </ul>
+                </div>
                 
-                <article class="card">
-                    <img src="https://picsum.photos/400/200?random=2" alt="Мобильные приложения" class="card__image" width="400" height="200">
-                    <h3 class="card__title">Мобильные приложения</h3>
-                    <p class="card__description">Разрабатываем кроссплатформенные мобильные приложения для iOS и Android.</p>
-                </article>
+                <div class="card">
+                    <img src="https://abrakadabra.fun/uploads/posts/2022-02/1644019823_1-abrakadabra-fun-p-tailer-derden-art-1.jpg" 
+                         alt="Красивый дизайн" 
+                         width="400" 
+                         height="300">
+                    <h3>Дизайн</h3>
+                    <p>Дизайн — это не про красоту. Это про доминацию.</p>
+                    <ul>
+                        <li>Интерфейсы, которые бьют по глазам. Целятся.</li>
+                        <li>Никаких пастельных тонов. Только цвета асфальта и крови.</li>
+                        <li>Шрифты, которые кричат. А не шепчут извинения.</li>
+                    </ul>
+                </div>
                 
-                <article class="card">
-                    <img src="https://picsum.photos/400/200?random=3" alt="UI/UX дизайн" class="card__image" width="400" height="200">
-                    <h3 class="card__title">UI/UX дизайн</h3>
-                    <p class="card__description">Создаем интуитивно понятные и эстетичные интерфейсы для цифровых продуктов.</p>
-                </article>
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXOFx8pupMlmHjmUn89wmLfpe83rPP-aD6Xw&s" 
+                         alt="Маркетинг" 
+                         width="400" 
+                         height="300">
+                    <h3>Продвижение</h3>
+                    <p>Мы не «приводим клиентов». Мы объявляем охоту.</p>
+                    <ul>
+                        <li>SEO — это заточка ножа для горла поисковой выдачи.</li>
+                        <li>Контекстная реклама, которая бьет точно в цель. Не как дробь из ружья, а как пуля из снайперской винтовки.</li>
+                        <li>Контент, от которого конкуренты будут терять сон. И клиентов.</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <!-- Секция с видео -->
-        <section class="section section--alt">
-            <h2 class="section__title">О нашей работе</h2>
-            <div class="media-container">
-                <video controls preload="metadata" poster="https://picsum.photos/800/450?random=4" class="media-container__video">
-                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
-                    Ваш браузер не поддерживает видео.
-                </video>
+        <section class="section">
+            <h2>Посмотрите, как мы работаем. Если осмелитесь.</h2>
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://vk.com/video_ext.php?oid=-21665793&id=456240945&hash=abf123c456d78e90"
+                        width="800" 
+                        height="450"
+                        frameborder="0"
+                        allowfullscreen
+                        title="Смешарики - Поднимаем пианино по лестнице">
+                    </iframe>
+                </div>
             </div>
+        </section>
+
+        <section class="section">
+            <h2>Хватит читать. Время ломать.</h2>
+            <p>Расскажите о вашем проекте, а мы его разберём, плюнем на детали и соберём заново. Сильнее.</p>
+            <button class="button" onclick="document.getElementById('contactDialog').showModal()">НАЧАТЬ ДРАКУ</button>
         </section>
     </main>
 
-    <!-- Футер -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="site-footer__inner">
-                <div class="site-footer__section">
-                    <h3>ТехноКомпания</h3>
-                    <p>Инновационные решения для вашего бизнеса</p>
+    <dialog class="modal" id="contactDialog">
+        <div class="modal-content">
+            <h2>Анкета для вступления</h2>
+            <form method="dialog" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Твоё кодовое имя</label>
+                    <input type="text" id="name" name="name" required minlength="2" placeholder="Можно просто имя">
                 </div>
-                
-                <div class="site-footer__section">
-                    <h3>Контакты</h3>
-                    <ul class="site-footer__links">
-                        <li><a href="mailto:info@company.com">info@company.com</a></li>
-                        <li><a href="tel:+78001234567">+7 (800) 123-45-67</a></li>
-                    </ul>
-                </div>
-                
-                <div class="site-footer__section">
-                    <h3>Навигация</h3>
-                    <ul class="site-footer__links">
-                        <li><a href="index.html">Главная</a></li>
-                        <li><a href="about.html">О нас</a></li>
-                        <li><a href="contacts.html">Контакты</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
 
-    <script src="script.js"></script>
+                <div class="form-group">
+                    <label for="email">Канал для шифрованных посланий</label>
+                    <input type="email" id="email" name="email" required placeholder="email@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Контакты для экстренной связи</label>
+                    <input type="tel" id="phone" name="phone" required 
+                           pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+                           oninput="formatPhone(this)"
+                           placeholder="будем выходить на связь через дымовые сигналы.">
+                    <small>Формат: +7 (900) 000-00-00.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="topic">Какую операцию выполняем?</label>
+                    <select id="topic" name="topic" required>
+                        <option value="">Выберите вариант</option>
+                        <option>Хочу сайт</option>
+                        <option>Есть вопрос</option>
+                        <option>Просто нужна помощь</option>
+                        <option>Не могу молчать</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Бриф на операцию</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Чем подробнее, тем точнее будет нанесён удар."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="button secondary" onclick="document.getElementById('contactDialog').close()">Передумал(а)</button>
+                    <button type="submit" class="button">ПОДТВЕРДИТЬ ЗАДАНИЕ</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
+
+    <script>
+        function formatPhone(input) {
+            let digits = input.value.replace(/\D/g,'').slice(0,11);
+            let d = digits.replace(/^8/, '7');
+            let parts = [];
+            
+            if (d.length > 0) parts.push('+7');
+            if (d.length > 1) parts.push(' (' + d.slice(1,4));
+            if (d.length >= 4) parts[parts.length - 1] += ')';
+            if (d.length >= 5) parts.push(' ' + d.slice(4,7));
+            if (d.length >= 8) parts.push('-' + d.slice(7,9));
+            if (d.length >= 10) parts.push('-' + d.slice(9,11));
+            
+            input.value = parts.join('');
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+            
+            alert('Ожидайте звонка и смотри по сторонам');
+            form.reset();
+            document.getElementById('contactDialog').close();
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark');
+            localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+        }
+
+        // Автовыбор темы
+        if (localStorage.getItem('theme') === 'dark' || 
+            (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.body.classList.add('dark');
+        }
+    </script>
 </body>
 </html>
